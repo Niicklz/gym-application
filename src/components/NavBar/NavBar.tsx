@@ -3,6 +3,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 import Logo from "@/assets/Logo.png"
 import { Link } from "../Link/Link"
 import { SelectedPage } from "@/shared/types"
+import useMediaQuery from "@/hooks/useMediaQuery"
 
 type NavBarProps = {
   selectedPage: SelectedPage,
@@ -10,10 +11,10 @@ type NavBarProps = {
 }
 
 export const NavBar = ({selectedPage, setSelectedPage}: NavBarProps) => {
-  
+  const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
 
   const flexBetween = "flex items-center justify-between" // This variable is to make the effect of a navbar :d
-
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     <header>
      <nav className={`${flexBetween} fixed top-0 z-30 w-full  py-6 `} >
@@ -22,7 +23,7 @@ export const NavBar = ({selectedPage, setSelectedPage}: NavBarProps) => {
           <img src={Logo} alt="logo" />
           {/* left Side of NavBar */}
         </div>
-        <div className={`${flexBetween} w-full`}>
+        {isAboveMediumScreens ? <div className={`${flexBetween} w-full gap-8`}>
           <ul className={`${flexBetween} gap-8 text-sm `}>
             <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Home"  />
             <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Benefits"/>
@@ -34,7 +35,7 @@ export const NavBar = ({selectedPage, setSelectedPage}: NavBarProps) => {
             <p>Sign In</p>
             <button>Become a Member</button>
           </div>
-        </div>
+        </div> : <button className="rounded-full bg-secondary-500 p-2" onClick={()=> setIsMenuToggled(!isMenuToggled)}><Bars3Icon className="h-6 w-6 text-white"/></button>}
       </div>
        
       
