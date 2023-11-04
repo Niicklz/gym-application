@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 import Logo from "@/assets/Logo.png"
+import { Link } from "../Link/Link"
+import { SelectedPage } from "@/shared/types"
 
-type Props = {}
+type NavBarProps = {
+  selectedPage: SelectedPage,
+  setSelectedPage: (value:SelectedPage)=> void
+}
 
-const NavBar = (props: Props) => {
+export const NavBar = ({selectedPage, setSelectedPage}: NavBarProps) => {
+  
+
   const flexBetween = "flex items-center justify-between" // This variable is to make the effect of a navbar :d
 
   return (
@@ -17,11 +24,11 @@ const NavBar = (props: Props) => {
         </div>
         <div className={`${flexBetween} w-full`}>
           <ul className={`${flexBetween} gap-8 text-sm `}>
-            <li>Home</li>
-            <li>About</li>
-            <li>Benefits</li>
-            <li>Our Classes</li>
-            <li>Contact Us</li>
+            <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Home"  />
+            <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Benefits"/>
+            <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Our Classes"/>
+            <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Contact us"/>
+            
           </ul>
           <div className={`${flexBetween} gap-8`} >
             <p>Sign In</p>
