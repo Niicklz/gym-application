@@ -19,7 +19,7 @@ export const NavBar = ({selectedPage, setSelectedPage, isTopOfPage}: NavBarProps
   const flexBetween = "flex items-center justify-between" // This variable is to make the effect of a navbar :d
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
-    <header>
+    <div>
      <nav className={`${navBackground} ${flexBetween} fixed top-0 z-30 w-full  py-6 `} >
       <div className={`${flexBetween} test mx-auto w-5/6`}>
       <div className={`${flexBetween}  w-full gap-16`}>
@@ -63,7 +63,7 @@ export const NavBar = ({selectedPage, setSelectedPage, isTopOfPage}: NavBarProps
           </ul>
         </div>
       )}  
-    </header>
+    </div>
   )
 }
 
