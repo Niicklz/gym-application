@@ -16,7 +16,7 @@ const ImagePreview = ({img, name, description}: ImagePreviewProp) => {
         <p className="text-2xl">{name}</p>
         <p className="mt-5">{description}</p>
       </div>
-      <img alt={`${img}`} src={img} />
+      <img alt={`${img}`} src={img} loading="lazy" />
     </li>
   )
 }
