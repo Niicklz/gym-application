@@ -2,7 +2,7 @@
 import HText from '../HText/HText'
 import {motion} from "framer-motion"
 import { SelectedPage } from '@/shared/types'
-import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png"
+import ContactUsPageGraphic from "../../../public/ContactUsPageGraphic.png"
 import { useForm } from 'react-hook-form'
 
 

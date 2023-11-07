@@ -8,7 +8,7 @@ import {
   } from "@heroicons/react/24/solid";
 import Benefit from "../Benefit/Benefit";
 import Button from "../Button/Button";
-import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
+import BenefitsPageGraphic from "../../../public/BenefitsPageGraphic.png";
 
 
 type Props = {
