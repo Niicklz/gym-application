@@ -1,9 +1,9 @@
 import { SelectedPage } from "@/shared/types"
-import HomePageText from "../../assets/HomePageText.png"
-import HomePageGraphic from "../../assets/HomePageGraphic.png"
-import SponsorRedbull from "../../assets/SponsorRedBull.png"
-import SponsorForbes from "../../assets/SponsorForbes.png"
-import SponsorFortune from "../../assets/SponsorFortune.png"
+import HomePageText from "../../../public/HomePageText.png"
+import HomePageGraphic from "../../../public/HomePageGraphic.png"
+import SponsorRedbull from "../../../public/SponsorRedBull.png"
+import SponsorForbes from "../../../public/SponsorForbes.png"
+import SponsorFortune from "../../../public/SponsorFortune.png"
 import useMediaQuery from "@/hooks/useMediaQuery"
 
 
